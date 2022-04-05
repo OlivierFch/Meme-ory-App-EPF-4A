@@ -15,4 +15,6 @@ C'est plus simple à maintenir car tout est centralisé, par exemple, si modific
 
 # Question 3
 
+Try to remove the 2 closures from both card.component.js & game.component.js. What happens? Why?
+Once figured out, remove the extra variable that makes the code to crash.
 
