@@ -20,6 +20,8 @@ Once figured out, remove the extra variable that makes the code to crash.
 
 Les closures permettent d'encapsuler les variables d'environnement et d'éviter les conflits en elles.
 
+Les deux fonctions demandent à ce qu'on les nomment. Le problème vient du fait que les deux fonctions définissent deux variables d'environnement qui rentrent en conflit, c'est pourquoi afin d'éviter ce problème, on les encapsule dans des scripts.
+
 # Question 4
 
 As you can see, npm install command also generated a package-lock.json file along with package.json. What is the purpose of this file?
@@ -29,6 +31,10 @@ Le fichier package-lock.json sert à stocker une représentation exacte des dép
 # Question 5
 all NPM dependencies use a 3-digit format for version numbers. How do you call this? Can you explain the meaning of the ^ symbol next to the bootstrap version?
 
-C'est du semantic versionning. Le format correspond à major.minor.patch. Le symbole `^` définit que la compatibilité de version et s'update sur les 5 prochaines modifications de version.
+C'est du semantic versionning. Le format correspond à major.minor.patch. Le symbole `^` signifie que le projet sera compatible et mis à jour avec toutes les versions suivantes jusqu'à ce que le major change.
 
 # Question 6
+What is a devDependency exactly? What are the differences with a dependency?
+Les devDependancy sont des packages qui sont installés par le développeur pour le développement local et le test.
+
+Les devDependancy sont utilisés uniquement lors du développement et ne doivent être installé qu'à ce moment. Ils ne sont pas utile quand l'application ou le site est en production, par contre les dependencies eux sont utiles à tout moment du cycle d'une application.
