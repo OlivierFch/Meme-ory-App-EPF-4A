@@ -38,3 +38,9 @@ What is a devDependency exactly? What are the differences with a dependency?
 Les devDependancy sont des packages qui sont installés par le développeur pour le développement local et le test.
 
 Les devDependancy sont utilisés uniquement lors du développement et ne doivent être installé qu'à ce moment. Ils ne sont pas utile quand l'application ou le site est en production, par contre les dependencies eux sont utiles à tout moment du cycle d'une application.
+
+# Question 7
+Can you think of at least 2 things that are possible with Java classes, but cannot be done with ES6 classes?
+
+Pour les ES6 : fonctions --> pas d'héritage
+Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java.
