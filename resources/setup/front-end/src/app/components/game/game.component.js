@@ -80,7 +80,6 @@
             ? new XMLHttpRequest()
             : new ActiveXObject("Microsoft.XMLHTTP");
     
-        // TODO Step 3.2 use template literals
         xhr.open("get", `${environment.api.host}/board?size=${this._size}`, true);
     
         xhr.onreadystatechange = () => {
