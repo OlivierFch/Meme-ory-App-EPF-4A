@@ -52,3 +52,6 @@ What are the differences between `var` and `let` ?
 
 # Question 9
 What is the `.bind(this)` stuff ? What does happen if you delete it? Is it needed when using an *arrow function* ?
+
+`.bind(this)` est une fontion qui permet de changer le contexte global avec un autre contexte où réside la fonction. Si `.bind(this)` est supprimé, il y aura une erreur car elle utilisera le contexte global et non le contexte lié à la fonction interne (confusion avec le `this`).
+`.bind(this)` n'est pas nécessaire puisque c'est une fonction anonyme (elle retourne un Callback qui est propre à la fonction).
