@@ -55,3 +55,28 @@ What is the `.bind(this)` stuff ? What does happen if you delete it? Is it neede
 
 `.bind(this)` est une fontion qui permet de changer le contexte global avec un autre contexte où réside la fonction. Si `.bind(this)` est supprimé, il y aura une erreur car elle utilisera le contexte global et non le contexte lié à la fonction interne (confusion avec le `this`).
 `.bind(this)` n'est pas nécessaire puisque c'est une fonction anonyme (elle retourne un Callback qui est propre à la fonction).
+
+# Question 10
+What are the advantages of Promises ?
+
+L'avantage est de pouvoir chaîner les opérations asynchrones, la garantie que les opérations vont se dérouler dans l'ordre voulu et une gestion des erreurs simplifiées tout en évitant le "callback hell".
+
+# Question 11
+What version of ECMAScript async / await was released in?
+
+Les syntaxes `async` et `await` sont introduits par la version ECMAScript-7 ou ES7.
+
+# Question 12
+What does the `@` symbol mean in `@babel/***` ?
+
+//
+
+# Question 13
+Look at the files produced within `dist/` folder. How babel transpile your class `WelcomeComponent` ?
+
+//
+
+# Question 14
+What is the weight of the transpiled sources compared to your original sources?
+
+//
