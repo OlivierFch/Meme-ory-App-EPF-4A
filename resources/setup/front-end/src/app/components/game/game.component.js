@@ -23,40 +23,28 @@
       this._matchedPairs = 0;
       }
 
-      init() {
+      async init() {
         // fetch the cards configuration from the server
-        this.fetchConfig(
-          (config) => {
-            
-            this._config = config;
-    
-            // create a card out of the config
-            this._cards = []; // TODO Step 3.3: use Array.map()
-            for (let i in this._config.ids) {
-              this._cards[i] = new CardComponent(this._config.ids[i]);
-            }
-    
-            this._boardElement = document.querySelector(".cards");
-    
-            for (let i in this._cards) {
-              // TODO Step 3.3: use Array.forEach()
-              ( function() {
-                
-                let card = this._cards[i];
-                this._boardElement.appendChild(card.getElement());
-                card.getElement().addEventListener(
-                  "click",
-                  () => {
-                    this._flipCard(card);
-                  }
-                );
-              }.bind(this)());
-            }
-    
-            this.start();
-          }
-        );
-      };
+        const config = await this.fetchConfig();
+        
+        this._config = config;
+  
+        // create a card out of the config
+        this._cards = [];
+  
+        this._config.ids.map((id) => this._cards.push(new CardComponent(id)));
+  
+        this._boardElement = document.querySelector(".cards");
+  
+        this._cards.forEach((element) => {
+          let card = element;
+          this._boardElement.appendChild(element.getElement());
+          card.getElement().addEventListener("click", () => {
+            this._flipCard(card);
+          });
+        });
+        this.start();
+      }
 
       start() {
         this._startTime = Date.now();
@@ -74,31 +62,15 @@
         );
       };
 
-      fetchConfig(cb) {
-        let xhr =
-          typeof XMLHttpRequest != "undefined"
-            ? new XMLHttpRequest()
-            : new ActiveXObject("Microsoft.XMLHTTP");
-    
-        xhr.open("get", `${environment.api.host}/board?size=${this._size}`, true);
-    
-        xhr.onreadystatechange = () => {
-          let status;
-          let data;
-          // https://xhr.spec.whatwg.org/#dom-xmlhttprequest-readystate
-          if (xhr.readyState == 4) {
-            // `DONE`
-            status = xhr.status;
-            if (status == 200) {
-              data = JSON.parse(xhr.responseText);
-              cb(data);
-            } else {
-              throw new Error(status);
-            }
-          }
-        };
-        xhr.send();
-      };
+
+      async fetchConfig() {
+        return fetch(`${environment.api.host}/board?size=${this._size}`, {
+          method: "GET",
+        })
+          .then((response) => response.json())
+          .catch((error) => console.log("Error while fetching   config: ", error));
+      }
+
 
       gotoScore() {
         let timeElapsedInSeconds = Math.floor(
@@ -181,14 +153,15 @@
     let result = {};
 
     let parts = query.split(delimiter);
-    // TODO Step 3.3: Use Array.map() & Array.reduce()
-    for (let i in parts) {
-      let item = parts[i];
-      let kv = item.split("=");
-      result[kv[0]] = kv[1];
-    }
-
-    return result;
+    
+    return parts
+      .map((items) => {
+        return items.split("=");
+    })
+      .reduce((result, kv) => {
+        result[kv[0]] = kv[1];
+        return result;
+      }, {});
   }
 
   // put component in global scope, to be runnable right from the HTML.
