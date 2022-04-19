@@ -24,12 +24,12 @@ Les deux fonctions demandent à ce qu'on les nomment. Le problème vient du fait
 
 # Question 4
 
-As you can see, npm install command also generated a package-lock.json file along with package.json. What is the purpose of this file?
+As you can see, `npm install` command also generated a `package-lock.json` file along with `package.json`. What is the purpose of this file?
 
-Le fichier package-lock.json sert à stocker une représentation exacte des dépendances installées dans le projet à un instant T pour qu'il soit reproductible.
+Le fichier `package-lock.json` sert à stocker une représentation exacte des dépendances installées dans le projet à un instant T pour qu'il soit reproductible.
 
 # Question 5
-all NPM dependencies use a 3-digit format for version numbers. How do you call this? Can you explain the meaning of the ^ symbol next to the bootstrap version?
+all NPM dependencies use a 3-digit format for version numbers. How do you call this? Can you explain the meaning of the `^` symbol next to the bootstrap version?
 
 C'est du semantic versionning. Le format correspond à major.minor.patch. Le symbole `^` signifie que le projet sera compatible et mis à jour avec toutes les versions suivantes jusqu'à ce que le major change.
 
@@ -62,7 +62,7 @@ What are the advantages of Promises ?
 L'avantage est de pouvoir chaîner les opérations asynchrones, la garantie que les opérations vont se dérouler dans l'ordre voulu et une gestion des erreurs simplifiées tout en évitant le "callback hell".
 
 # Question 11
-What version of ECMAScript async / await was released in?
+What version of ECMAScript `async` / `await` was released in?
 
 Les syntaxes `async` et `await` sont introduits par la version ECMAScript-7 ou ES7.
 
