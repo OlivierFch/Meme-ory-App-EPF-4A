@@ -44,3 +44,11 @@ Can you think of at least 2 things that are possible with Java classes, but cann
 
 Pour les ES6 : fonctions --> pas d'héritage
 Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java.
+
+# Question 8
+What are the differences between `var` and `let` ?
+
+`let` permet de déclarer des variables dont la portée est limitée à celle du bloc dans lequel elles sont déclarées. `var` permet de définir une variable globale ou locale à une fonction (sans distinction des blocs utilisés dans la fonction).
+
+# Question 9
+What is the `.bind(this)` stuff ? What does happen if you delete it? Is it needed when using an *arrow function* ?
