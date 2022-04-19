@@ -4,10 +4,10 @@
 (function () {
   // TODO Step 7 remove this closure
 
-  // TODO Step 3.1 create a class
-  /* class CardComponent constructor */
-  function CardComponent(id) {
-    // is this card flipped ?
+  class CardComponent {
+
+    constructor(id) {
+      // is this card flipped ?
     this._flipped = false;
 
     // has the matching card has been discovered already ?
@@ -22,41 +22,38 @@
       "../game/card/assets/card-" + this._id + ".png";
     this._imageElt.querySelector("img.back-face").src =
       "../game/card/assets/back.png";
+    }
+
+    getElement() {
+      if (!this._elt) {
+        this._elt = document
+          .getElementById("card-template")
+          .content.cloneNode(true).firstElementChild;
+      }
+      return this._elt;
+    };
+
+    flip() {
+      this._imageElt.classList.toggle("flip");
+      this._flipped = !this._flipped;
+    };
+
+    equals(card) {
+      return card._id === this._id;
+    };
+
+    get flipped () {
+      return this._flipped;
+    }
+    
   }
 
-  /* method CardComponent.getElement */
   // TODO Step 7: remove this method
-  CardComponent.prototype.getElement = function getElement() {
-    if (!this._elt) {
-      this._elt = document
-        .getElementById("card-template")
-        .content.cloneNode(true).firstElementChild;
-    }
-    return this._elt;
-  };
+  
 
   // TODO Step 7 implement getTemplate() {}
 
-  /* method CardComponent.flip */
-  CardComponent.prototype.flip = function flip() {
-    this._imageElt.classList.toggle("flip");
-    this._flipped = !this._flipped;
-  };
-
-  /* method CardComponent.equals */
-  CardComponent.prototype.equals = function equals(card) {
-    return card._id === this._id;
-  };
-
-  /* CardComponent.get flipped() */
-  Object.defineProperties(CardComponent.prototype, {
-    flipped: {
-      get: function () {
-        return this._flipped;
-      },
-    },
-  });
-
+  
   // put component in global scope, to be runnable right from the HTML.
   // TODO Step 7 export CardComponent
   window.CardComponent = CardComponent;
