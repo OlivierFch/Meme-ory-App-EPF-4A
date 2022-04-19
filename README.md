@@ -65,3 +65,18 @@ L'avantage est de pouvoir chaîner les opérations asynchrones, la garantie que 
 What version of ECMAScript async / await was released in?
 
 Les syntaxes `async` et `await` sont introduits par la version ECMAScript-7 ou ES7.
+
+# Question 12
+What does the `@` symbol mean in `@babel/***` ?
+
+//
+
+# Question 13
+Look at the files produced within `dist/` folder. How babel transpile your class `WelcomeComponent` ?
+
+//
+
+# Question 14
+What is the weight of the transpiled sources compared to your original sources?
+
+//
