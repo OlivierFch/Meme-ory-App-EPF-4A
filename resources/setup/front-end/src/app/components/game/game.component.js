@@ -87,6 +87,7 @@
         );
       };
 
+
       _flipCard(card) {
         if (this._busy) {
           return;
@@ -151,7 +152,6 @@
     let query = url.href.split("?")[1] || "";
     let delimiter = "&";
     let result = {};
-
     let parts = query.split(delimiter);
     
     return parts
