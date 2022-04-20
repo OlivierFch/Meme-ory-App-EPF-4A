@@ -84,6 +84,6 @@ Le poids de la source transpilée est plus grand que la source original car la t
 # Question 15
 What is the difference between `import * from './utils'` and `import { parseUrl } from './utils'` ?
 
-//
+`import * from './utils'` va importer l'ensemble des composants, classes, function dans `utils.js` tandis que `import { parseUrl } from './utils'` va elle importer uniquement la fonction `parseUrl()`.
 
 # Question 16
