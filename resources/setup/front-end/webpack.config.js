@@ -5,6 +5,7 @@ module.exports = {
     watch: false,
     mode: "development",
     entry: "./src/main.js",
+    devtool: "eval-cheap-module-source-map",
     plugins: [
         new HtmlWebpackPlugin({
             filename: "index.html",
