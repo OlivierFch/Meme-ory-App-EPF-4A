@@ -1,10 +1,11 @@
 import { parseUrl } from "../../utils/utils";
-// TODO Step 7 import { Component } from "../../utils/component";
-// TODO Step 7 import template from "./score.component.html"
+import { Component } from "../../utils/component";
+import template from "./score.component.html"
 
-class ScoreComponent {
+export class ScoreComponent extends Component {
 
   constructor() {
+    super("score")
     var params = parseUrl();
     this.name = params.name;
     this.size = parseInt(params.size);
@@ -17,13 +18,8 @@ class ScoreComponent {
     document.getElementById('time').innerText = this.time;
   }
 
+  getTemplate() {
+    return template;
+  }
 
 }
-
-
-// TODO Step 7 implement getTemplate() {}
-
-// put component in global scope, to be runnable right from the HTML.
-// TODO Step 7 export ScoreComponent
-window.ScoreComponent = ScoreComponent;
-

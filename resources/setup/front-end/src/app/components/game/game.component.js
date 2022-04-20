@@ -1,18 +1,18 @@
+import { Component } from "../../utils/component";
 import { parseUrl } from "../../utils/utils";
-// TODO Step 7 import { Component } from "../../utils/component";
-// TODO Step 7 import template from "./game.component.html"
+import { CardComponent } from "./card/card.component";
+import template from "./game.component.html";
 
-
-// TODO Step 6 remove this closure
 var environment = {
   api: {
     host: "http://localhost:8081",
   },
 };
 
-class GameComponent {
+export class GameComponent extends Component {
 
   constructor() {
+    super("game");
     // gather parameters from URL
     let params = parseUrl();
 
@@ -21,6 +21,10 @@ class GameComponent {
     this._size = parseInt(params.size) || 9;
     this._flippedCard = null;
     this._matchedPairs = 0;
+  }
+
+  getTemplate() {
+    return template;
   }
 
   async init() {
@@ -140,12 +144,4 @@ class GameComponent {
     }
   };
 
-
 }
-
-// TODO Step 7 implement getTemplate() {}
-
-// put component in global scope, to be runnable right from the HTML.
-// TODO Step 7: export GameComponent
-window.GameComponent = GameComponent;
-
