@@ -80,3 +80,10 @@ Babel ajoute des `require()` qui permettent d'importer des fonctions déjà exis
 What is the weight of the transpiled sources compared to your original sources?
 
 Le poids de la source transpilée est plus grand que la source original car la transpilation requiert une adaptation d'un code vers sa version antérieure, ce qui nécessite plus de lignes afin de réaliser une tâche.
+
+# Question 15
+What is the difference between `import * from './utils'` and `import { parseUrl } from './utils'` ?
+
+//
+
+# Question 16
