@@ -106,4 +106,4 @@ Can you guess how exactly style-loader works exactly?
 # Question 20
 What does the `_` prefix means on a sass file?
 
-//
+Le `_` (underscore) est une convention pour dire que le fichier ayant le `_` correspond à une partie du css complet. Cela signifie que la feuille de style va être importée (`@import`) dans une feuille de style principale, c'est-à-dire `styles.scss`. L'avantage d'utiliser des préfixs `_` est de pouvoir utiliser plusieurs fichiers pour organiser le code et que tout soit compilé dans un seul fichier.
