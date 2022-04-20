@@ -69,14 +69,14 @@ Les syntaxes `async` et `await` sont introduits par la version ECMAScript-7 ou E
 # Question 12
 What does the `@` symbol mean in `@babel/***` ?
 
-//
+Le symbole `@` désigne le namespace qui possède le repository npm.
 
 # Question 13
 Look at the files produced within `dist/` folder. How babel transpile your class `WelcomeComponent` ?
 
-//
+Babel ajoute des `require()` qui permettent d'importer des fonctions déjà existantes en ES5 qui font exactement la même chose que notre code initial en ES6. (But du transpiler)
 
 # Question 14
 What is the weight of the transpiled sources compared to your original sources?
 
-//
+Le poids de la source transpilée est plus grand que la source original car la transpilation requiert une adaptation d'un code vers sa version antérieure, ce qui nécessite plus de lignes afin de réaliser une tâche.
