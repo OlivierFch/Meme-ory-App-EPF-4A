@@ -39,7 +39,8 @@ Les devDependancy sont utilisés uniquement lors du développement et ne doivent
 Can you think of at least 2 things that are possible with Java classes, but cannot be done with ES6 classes?
 
 Pour les ES6 : fonctions --> pas d'héritage
-Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java.
+Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java. (pas de surcharge possible en ES6)
+On ne peut pas avoir d'interface pour les classes en ES6.
 
 # Question 8
 What are the differences between `var` and `let` ?
