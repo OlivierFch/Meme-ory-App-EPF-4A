@@ -60,7 +60,7 @@ L'avantage est de pouvoir chaîner les opérations asynchrones, la garantie que 
 # Question 11
 What version of ECMAScript `async` / `await` was released in?
 
-Les syntaxes `async` et `await` sont introduits par la version ECMAScript-7 ou ES7.
+Les mots-clés `async` et `await` ont été ajoutés à la documentation JavaScript dans la version ECMAScript 2017, la 8e version de la documentation.
 
 # Question 12
 What does the `@` symbol mean in `@babel/***` ?
