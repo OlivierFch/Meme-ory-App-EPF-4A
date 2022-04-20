@@ -101,7 +101,7 @@ Play the whole game with size=2. By browsing the 3 views of the application, how
 # Question 19
 Can you guess how exactly style-loader works exactly?
 
-//
+`style-loader` takes CSS you've imported in your JavaScript files, and injects them as `<style></style>` tags into the DOM.
 
 # Question 20
 What does the `_` prefix means on a sass file?
