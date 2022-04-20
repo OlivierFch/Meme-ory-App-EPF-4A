@@ -87,3 +87,13 @@ What is the difference between `import * from './utils'` and `import { parseUrl 
 `import * from './utils'` va importer l'ensemble des composants, classes, function dans `utils.js` tandis que `import { parseUrl } from './utils'` va elle importer uniquement la fonction `parseUrl()`.
 
 # Question 16
+Why the `utils.js` will also be transpiled?
+
+//
+
+# Question 17
+What does the `webpack --config webpack.config.js` do ?
+
+//
+
+# Question 18
