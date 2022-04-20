@@ -89,7 +89,7 @@ What is the difference between `import * from './utils'` and `import { parseUrl 
 # Question 16
 Why the `utils.js` will also be transpiled?
 
-//
+`utils.js` est aussi transpilé car il utilise des notions de ES6 (.map(), .reduce(), etc...) qui n'existe pas dans ES5.
 
 # Question 17
 What does the `webpack --config webpack.config.js` do ?
