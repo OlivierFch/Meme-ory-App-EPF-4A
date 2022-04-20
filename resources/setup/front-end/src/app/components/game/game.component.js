@@ -77,19 +77,12 @@ export class GameComponent extends Component {
 
 
   gotoScore() {
-    let timeElapsedInSeconds = Math.floor(
+    const timeElapsedInSeconds = Math.floor(
       (Date.now() - this._startTime) / 1000
     );
-    clearInterval(this._timer);
 
-    setTimeout(
-      () => {
-        // TODO Step 7: change path to: `score?name=${this._name}&size=${this._size}'&time=${timeElapsedInSeconds}`;
-        window.location = `../score/score.component.html?name=${this._name}&size=${this._size}&time=${timeElapsedInSeconds}`;
-      },
-      750
-    );
-  };
+    setTimeout(() => window.location.hash = `score?name=${this._name}&size=${this._size}'&time=${timeElapsedInSeconds}`, 750);
+  }
 
 
   _flipCard(card) {

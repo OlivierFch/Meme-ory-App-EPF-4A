@@ -34,7 +34,5 @@ export class WelcomeComponent extends Component {
 }
 
 function _startGame(name, size) {
-    // TODO Step 7: change path to: `game?name=${name}=name&size=${size}`
-
-    window.location = `../game/game.component.html?name=${name}&size=${size}`
-}
+    window.location.hash = `game?name=${name}=name&size=${size}`;
+  }
