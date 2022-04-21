@@ -1,6 +1,7 @@
 /*****
  * Score Component
  */
+ @import "../../styles/_colors.scss";
 
 /* score { ... } */
 .score-cmp img.happy:hover {
@@ -9,4 +10,8 @@
 
     /* When the animation is finished, start again */
     animation-iteration-count: infinite;
+}
+
+.score-cmp .congrats, .size, .time {
+    color: $primary;
 }

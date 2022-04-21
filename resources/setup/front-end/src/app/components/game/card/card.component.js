@@ -1,5 +1,5 @@
 import { Component } from "../../../utils/component";
-import "./card.component.css";
+import "./card.component.scss";
 import template from "./card.component.html";
 
 export class CardComponent extends Component {
