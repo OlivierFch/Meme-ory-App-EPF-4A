@@ -1,29 +1,25 @@
 ### Meme-ory-App
 
 # Question 1
-
 Play the whole game with size=2. By browsing the 3 views of the application, how many files did your browser download overall? How many time did it took to load them all?
+
 * Sur la première vue : 5 fichiers, 60 ms
 * Sur la deuxième vue : 10 fichiers, 95 ms
 * Sur la troisième vue : 6 fichiers, 61 ms
 
 # Question 2
-
 Component-oriented programming for the web is considered more maintainable. Why?
 
 C'est plus simple à maintenir car tout est centralisé, par exemple, si modification d'une couleur dans un fichier CSS, le changement est appliqué à tout les endroits où il est appelé, au lieu de faire le changement à chaque endroit manuellement.
 
 # Question 3
-
 Try to remove the 2 closures from both card.component.js & game.component.js. What happens? Why?
 Once figured out, remove the extra variable that makes the code to crash.
 
 Les closures permettent d'encapsuler les variables d'environnement et d'éviter les conflits en elles.
-
 Les deux fonctions demandent à ce qu'on les nomment. Le problème vient du fait que les deux fonctions définissent deux variables d'environnement qui rentrent en conflit, c'est pourquoi afin d'éviter ce problème, on les encapsule dans des scripts.
 
 # Question 4
-
 As you can see, `npm install` command also generated a `package-lock.json` file along with `package.json`. What is the purpose of this file?
 
 Le fichier `package-lock.json` sert à stocker une représentation exacte des dépendances installées dans le projet à un instant T pour qu'il soit reproductible.
@@ -43,7 +39,8 @@ Les devDependancy sont utilisés uniquement lors du développement et ne doivent
 Can you think of at least 2 things that are possible with Java classes, but cannot be done with ES6 classes?
 
 Pour les ES6 : fonctions --> pas d'héritage
-Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java.
+Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java. (pas de surcharge possible en ES6)
+On ne peut pas avoir d'interface pour les classes en ES6.
 
 # Question 8
 What are the differences between `var` and `let` ?
@@ -64,7 +61,7 @@ L'avantage est de pouvoir chaîner les opérations asynchrones, la garantie que 
 # Question 11
 What version of ECMAScript `async` / `await` was released in?
 
-Les syntaxes `async` et `await` sont introduits par la version ECMAScript-7 ou ES7.
+Les mots-clés `async` et `await` ont été ajoutés à la documentation JavaScript dans la version ECMAScript 2017, la 8e version de la documentation.
 
 # Question 12
 What does the `@` symbol mean in `@babel/***` ?
@@ -94,6 +91,19 @@ Why the `utils.js` will also be transpiled?
 # Question 17
 What does the `webpack --config webpack.config.js` do ?
 
-//
+La commande permet de configurer un fichier de configuration différent, ici `webpack.config.js`. Un webpack permet de regrouper un ensemble de fichiers JavaScript pour les utiliser dans un navigateur.
 
 # Question 18
+Play the whole game with size=2. By browsing the 3 views of the application, how many files did your browser download in total? How many time did it took to load them all?
+
+9 fichiers au total ont été chargés en 335ms.
+
+# Question 19
+Can you guess how exactly style-loader works exactly?
+
+`style-loader` takes CSS you've imported in your JavaScript files, and injects them as `<style></style>` tags into the DOM.
+
+# Question 20
+What does the `_` prefix means on a sass file?
+
+Le `_` (underscore) est une convention pour dire que le fichier ayant le `_` correspond à une partie du css complet. Cela signifie que la feuille de style va être importée (`@import`) dans une feuille de style principale, c'est-à-dire `styles.scss`. L'avantage d'utiliser des préfixs `_` est de pouvoir utiliser plusieurs fichiers pour organiser le code et que tout soit compilé dans un seul fichier.
