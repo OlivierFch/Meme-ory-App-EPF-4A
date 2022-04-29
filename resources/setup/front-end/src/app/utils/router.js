@@ -4,7 +4,7 @@ import { getRenderId } from './component';
 export class Router {
 
     /**
-     * Create a new router. This router will load components into the given outlet.
+     * This router will load components into the given outlet.
      * @param {HTMLElement} outlet The element to put components into.
      */
     constructor(outlet) {

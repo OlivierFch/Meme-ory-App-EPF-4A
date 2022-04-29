@@ -14,10 +14,6 @@ export class Component {
         this._elt.innerHTML = this.getTemplate();
     }
 
-    /**
-     * Called by the Component constructor to create an element out of the component's HTML.
-     * You MUST override this method in your component subclasses
-     */
     getTemplate() {
         throw new Error('you should override "Component.getTemplate()"');
     }
@@ -37,7 +33,6 @@ export class Component {
             throw new TypeError('outlet is null! Did you forget to pass outlet to `super.render(outlet)`?');
         }
 
-        // replace the old content by the new one
         if (outlet.firstChild) {
             outlet.replaceChild(this.getElement(), outlet.firstChild);
         } else {
