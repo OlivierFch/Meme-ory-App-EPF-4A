@@ -2,6 +2,7 @@
  * GLOBAL STYLE
  */
 @import "./colors";
+@import "~bootstrap/scss/bootstrap";
 
 body {
     background-color: $primary-light;
@@ -23,7 +24,7 @@ body > main {
 
 /* global style */
 .bg-primary * {
-    color: $primary;
+    color: $primary-txt;
 }
 
 .bg-dark * {
