@@ -4,7 +4,6 @@
 @import "./colors";
 
 body {
-    // background-color: #F5F5F5;
     background-color: $primary-light;
     position: absolute;
     width: 100%;
@@ -12,8 +11,10 @@ body {
     overflow: hidden;
 }
 
-.navbar-brand img {
-    height: 50px;
+.navbar-brand {
+    img {
+        height: 50px;
+    }
 }
 
 body > main {
