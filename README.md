@@ -3,14 +3,14 @@
 # Question 1
 Play the whole game with size=2. By browsing the 3 views of the application, how many files did your browser download overall? How many time did it took to load them all?
 
-* Sur la première vue : 5 fichiers, 60 ms
-* Sur la deuxième vue : 10 fichiers, 95 ms
-* Sur la troisième vue : 6 fichiers, 61 ms
+* Première vue : 5 fichiers, 60 ms
+* Deuxième vue : 10 fichiers, 95 ms
+* Troisième vue : 6 fichiers, 61 ms
 
 # Question 2
 Component-oriented programming for the web is considered more maintainable. Why?
 
-C'est plus simple à maintenir car tout est centralisé, par exemple, si modification d'une couleur dans un fichier CSS, le changement est appliqué à tout les endroits où il est appelé, au lieu de faire le changement à chaque endroit manuellement.
+C'est plus simple à maintenir car tout est centralisé, par exemple, s'il y a modification d'une couleur dans un fichier CSS, le changement est appliqué simultanément à tout les endroits où il est appelé, au lieu de faire le changement à chaque endroit manuellement.
 
 # Question 3
 Try to remove the 2 closures from both card.component.js & game.component.js. What happens? Why?
@@ -22,7 +22,7 @@ Les deux fonctions demandent à ce qu'on les nomment. Le problème vient du fait
 # Question 4
 As you can see, `npm install` command also generated a `package-lock.json` file along with `package.json`. What is the purpose of this file?
 
-Le fichier `package-lock.json` sert à stocker une représentation exacte des dépendances installées dans le projet à un instant T pour qu'il soit reproductible.
+Le fichier `package-lock.json` permet de conserver une trace des versions de chaque packages installés à un instant T pour qu'il soit reproductible et repris par d'autres développeurs.
 
 # Question 5
 all NPM dependencies use a 3-digit format for version numbers. How do you call this? Can you explain the meaning of the `^` symbol next to the bootstrap version?
@@ -31,15 +31,14 @@ C'est du semantic versionning. Le format correspond à major.minor.patch. Le sym
 
 # Question 6
 What is a devDependency exactly? What are the differences with a dependency?
-Les devDependancy sont des packages qui sont installés par le développeur pour le développement local et le test.
 
-Les devDependancy sont utilisés uniquement lors du développement et ne doivent être installé qu'à ce moment. Ils ne sont pas utile quand l'application ou le site est en production, par contre les dependencies eux sont utiles à tout moment du cycle d'une application.
+Les devDependancy sont des packages qui sont installés par le développeur pour le développement local et le test.
+Les devDependancy sont utilisés uniquement lors du développement et ne doivent être installé qu'à ce moment. Ils ne sont pas utile quand l'application ou le site est en production, par contre les dependencies, elles, sont utiles à tout moment du cycle d'une application.
 
 # Question 7
 Can you think of at least 2 things that are possible with Java classes, but cannot be done with ES6 classes?
 
-Pour les ES6 : fonctions --> pas d'héritage
-Un seul constructeur possible pour ES6 // une infinité de constructeur pour Java. (pas de surcharge possible en ES6)
+Pour l'ES6, les fonctions n'ont pas d'héritage et il n'est possible d'avoir qu'un seul constructeur (Pas de surcharge). Contrairement au Java où l'on peut avoir une infinité de constructeurs.
 On ne peut pas avoir d'interface pour les classes en ES6.
 
 # Question 8
@@ -76,7 +75,7 @@ Babel ajoute des `require()` qui permettent d'importer des fonctions déjà exis
 # Question 14
 What is the weight of the transpiled sources compared to your original sources?
 
-Le poids de la source transpilée est plus grand que la source original car la transpilation requiert une adaptation d'un code vers sa version antérieure, ce qui nécessite plus de lignes afin de réaliser une tâche.
+Le poids de la source transpilée est plus grand que la source original car la transpilation requiert une adaptation d'un code vers sa version antérieure, ce qui nécessite plus de lignes afin de réaliser une même tâche.
 
 # Question 15
 What is the difference between `import * from './utils'` and `import { parseUrl } from './utils'` ?
@@ -102,8 +101,9 @@ Play the whole game with size=2. By browsing the 3 views of the application, how
 Can you guess how exactly style-loader works exactly?
 
 `style-loader` takes CSS you've imported in your JavaScript files, and injects them as `<style></style>` tags into the DOM.
+`style-loader` prends le CSS qui a été importé dans les fichiers JavaScript, puis les injecte comme des balises `<style></style>` dans le DOM.
 
 # Question 20
 What does the `_` prefix means on a sass file?
 
-Le `_` (underscore) est une convention pour dire que le fichier ayant le `_` correspond à une partie du css complet. Cela signifie que la feuille de style va être importée (`@import`) dans une feuille de style principale, c'est-à-dire `styles.scss`. L'avantage d'utiliser des préfixs `_` est de pouvoir utiliser plusieurs fichiers pour organiser le code et que tout soit compilé dans un seul fichier.
+Le `_` (underscore) est une convention pour dire que le fichier ayant le `_` correspond à une partie du css complet. Cela signifie que la feuille de style va être importée (`@import`) dans une feuille de style principale, c'est-à-dire `styles.scss`. L'avantage d'utiliser des préfix `_` est de pouvoir utiliser plusieurs fichiers pour organiser le code et que tout soit compilé dans un seul fichier.
