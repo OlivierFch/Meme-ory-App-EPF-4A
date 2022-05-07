@@ -3,9 +3,9 @@
 # Question 1
 Play the whole game with size=2. By browsing the 3 views of the application, how many files did your browser download overall? How many time did it took to load them all?
 
-* Première vue : 5 fichiers, 60 ms
-* Deuxième vue : 10 fichiers, 95 ms
-* Troisième vue : 6 fichiers, 61 ms
+* Vue de l'accueil (Welcome) : 5 fichiers, 62 ms
+* Vue du jeu (Game) : 10 fichiers, 96 ms
+* Vue du résultat (Score) : 6 fichiers, 63 ms
 
 # Question 2
 Component-oriented programming for the web is considered more maintainable. Why?
@@ -65,7 +65,7 @@ Les mots-clés `async` et `await` ont été ajoutés à la documentation JavaScr
 # Question 12
 What does the `@` symbol mean in `@babel/***` ?
 
-Le symbole `@` désigne le namespace qui possède le repository npm.
+Le symbole `@` désigne le namespace qui possède le repository npm. Cette notation permet d'avoir plusieurs bibliothèques avec des namespaces différents.
 
 # Question 13
 Look at the files produced within `dist/` folder. How babel transpile your class `WelcomeComponent` ?
@@ -85,12 +85,13 @@ What is the difference between `import * from './utils'` and `import { parseUrl 
 # Question 16
 Why the `utils.js` will also be transpiled?
 
-`utils.js` est aussi transpilé car il utilise des notions de ES6 (.map(), .reduce(), etc...) qui n'existe pas dans ES5.
+`utils.js` est aussi transpilé car tous les fichiers `.js` du dossier `/app` sont déjà transpilés.
+`utils.js` utilise des notions de ES6 (.map(), .reduce(), etc...) qui n'existe pas dans ES5, donc il sera lui aussi transpilé. 
 
 # Question 17
 What does the `webpack --config webpack.config.js` do ?
 
-La commande permet de configurer un fichier de configuration différent, ici `webpack.config.js`. Un webpack permet de regrouper un ensemble de fichiers JavaScript pour les utiliser dans un navigateur.
+La commande webpack permet de regrouper l'ensemble des fichiers JavaScript de l'application pour les utiliser dans un navigateur.
 
 # Question 18
 Play the whole game with size=2. By browsing the 3 views of the application, how many files did your browser download in total? How many time did it took to load them all?
